@@ -11,6 +11,30 @@ export default ( server ) => {
     } );
 
     server.route( {
+    
+        method: 'POST',
+        path: '/forgot',
+        handler: Controller.handleForgotPassword
+
+    } );
+
+    server.route( {
+
+        method: 'GET',
+        path: '/forgot/{guid}',
+        handler: Controller.handleShowChangePasswordForm
+    
+    } );
+
+    server.route( {
+
+        method: 'POST',
+        path: '/forgot/{guid}',
+        handler: Controller.handleForgotPasswordUpdate
+    
+    } );
+
+    server.route( {
 
         method: 'GET',
         path: '/bird',

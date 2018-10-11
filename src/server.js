@@ -1,6 +1,8 @@
 import Hapi from 'hapi';
 import jwt from 'hapi-auth-jwt2';
 import routes from '../routes';
+import vision from 'vision';
+import Handlebars from 'handlebars';
 
 const server = Hapi.Server( {
 
@@ -20,6 +22,15 @@ const initPlugins = async () => {
                     isValid: true
                 }
             }
+        } );
+        
+        await server.register( vision );
+        server.views( {
+            engines: {
+                html: Handlebars
+            },
+            relativeTo: __dirname,
+            path: '../static'
         } );
 
         await server.register( routes );

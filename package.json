@@ -24,8 +24,10 @@
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "handlebars": "^4.0.12",
     "hapi": "^17.6.0",
     "hapi-auth-jwt2": "^8.1.0",
-    "thinky": "^2.3.9"
+    "thinky": "^2.3.9",
+    "vision": "^5.4.0"
   }
 }

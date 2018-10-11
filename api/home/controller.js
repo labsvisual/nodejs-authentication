@@ -8,6 +8,26 @@ const controller = {
 
     },
 
+    async handleForgotPassword( request, h ) {
+
+        return 'Forgot Password Send Email Works!';
+
+    },
+
+    async handleForgotPasswordUpdate( request, h ) {
+        
+        return 'Forgot Password Reset Works!';
+        
+    },
+
+    async handleShowChangePasswordForm( request, h ) {
+
+        return h.view( 'change.html', {
+            guid: request.params.guid
+        } );
+
+    },
+
     async handleCreate( request, h ) {
         
         return 'Create Works!';
